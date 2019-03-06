@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +10,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #2d363e;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  border: 1px solid #85909e;
+  padding: 8px 16px;
+  border-radius: 22.5px;
+  font-family: inherit;
+  font-size: 16px;
+  color: #2d363e;
+  font-weight: bold;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
 }

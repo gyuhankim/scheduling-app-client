@@ -1,0 +1,17 @@
+form {
+  text-align: left;
+}
+
+.input-field {
+  margin: 20px 0;
+}
+
+.form-label, .error {
+  display: block;
+}
+
+.error {
+  font-size: 14px;
+  font-weight: normal;
+  color: red;
+}

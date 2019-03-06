@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from './Form';
+import Schedule from './Schedule';
 
 import '../styles/App.css';
 
@@ -7,10 +8,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+
           <p>Hello world!</p>
-          <Form />
-        </header>
+
+          <div className="form-container">
+            <Form />
+          </div>
+
+          <div className="schedule-container">
+            <Schedule test="wordup g" />
+          </div>
+
       </div>
     );
   }
