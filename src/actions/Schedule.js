@@ -18,7 +18,17 @@ export const getScheduleError = err => ({
 })
 
 export const getSchedule = () => dispatch => {
+  dispatch(getScheduleRequest());
 
+  return fetch(`${API_BASE_URL}/schedule`, {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+  .then(res => res.json())
+  .then(schedule => dispatch(getScheduleSuccess(schedule)))
+  .catch(err => dispatch(getScheduleError(err)))
 }
 
 export const UPDATE_SCHEDULE_REQUEST = 'UPDATE_SCHEDULE_REQUEST';

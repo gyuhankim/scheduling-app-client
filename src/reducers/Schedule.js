@@ -8,7 +8,7 @@ import {
 } from '../actions/Schedule';
 
 const initialState = {
-  schedule: [],
+  timeslots: [],
   loading: false,
   error: null
 }
@@ -25,7 +25,7 @@ export default function reducer(state = initialState, action) {
     case GET_SCHEDULE_SUCCESS:
     return {
       ...state,
-      schedule: action.schedule,
+      timeslots: action.schedule,
       loading: false,
       error: null
     }
@@ -46,7 +46,7 @@ export default function reducer(state = initialState, action) {
     case UPDATE_SCHEDULE_SUCCESS:
     return {
       ...state,
-      schedule: action.schedule,
+      timeslots: action.schedule,
       loading: false,
       error: null
     }

@@ -8,9 +8,9 @@ import '../styles/Dashboard.css';
 function Dashboard(props) {
     return (
       <div className="dashboard">
-        <div className="form-container">
+        {/* <div className="form-container">
           <Form />
-        </div>
+        </div> */}
 
         <div className="schedule-container">
           <Schedule />
@@ -20,7 +20,7 @@ function Dashboard(props) {
 }
 
 const mapStateToProps = state => ({
-  // loggedIn: state.auth.currentUser !== null
+  
 });
 
 export default connect(mapStateToProps)(Dashboard);

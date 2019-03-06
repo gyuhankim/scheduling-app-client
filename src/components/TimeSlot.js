@@ -1,23 +1,13 @@
 import React, { Component } from 'react';
 
-import '../styles/TimeSlot.css';
+import '../styles/Timeslot.css';
 
-class TimeSlot extends Component {
-  render() {
-    return (
-      <div className="TimeSlot">
-      
-          <div className="form-container">
-            <Form />
-          </div>
-
-          <div className="schedule-container">
-            <Schedule test="wordup g" />
-          </div>
-
-      </div>
-    );
-  }
+function TimeSlot(props) {
+  return (
+    <div className="TimeSlot">
+      <div className="timeslot-time">{props.startTime} to {props.endTime}</div>
+    </div>
+  );
 }
 
 export default TimeSlot;
