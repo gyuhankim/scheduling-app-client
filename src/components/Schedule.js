@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import '../styles/Schedule.css';
 
@@ -10,4 +11,8 @@ function Schedule(props) {
     );
 }
 
-export default Schedule;
+const mapStateToProps = state => ({
+  // loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(Schedule);

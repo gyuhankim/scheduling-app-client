@@ -1,6 +1,5 @@
 import React from 'react';
 import { Field, reduxForm, SubmissionError } from 'redux-form';
-import { required, nonEmpty } from '../validators';
 
 import '../styles/Form.css';
 

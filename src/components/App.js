@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Form from './Form';
-import Schedule from './Schedule';
+import { connect } from 'react-redux';
+import { Route, withRouter } from 'react-router-dom';
+import Dashboard from './Dashboard';
 
 import '../styles/App.css';
 
@@ -9,19 +10,16 @@ class App extends Component {
     return (
       <div className="App">
 
-          <p>Hello world!</p>
-
-          <div className="form-container">
-            <Form />
-          </div>
-
-          <div className="schedule-container">
-            <Schedule test="wordup g" />
-          </div>
+        <Route exact path="/" component={Dashboard} />
 
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  example: state.example
+})
+
+export default withRouter(connect(mapStateToProps)(App));
+// export default connect(mapStateToProps)(HeaderBar);
