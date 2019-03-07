@@ -1,0 +1,12 @@
+.timeslot {
+  border: 1px solid #cfd4da;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+}
+
+.timeslot:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+}

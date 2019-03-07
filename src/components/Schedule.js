@@ -19,9 +19,16 @@ class Schedule extends React.Component {
     let timeslots;
 
     if (this.props.schedule) {
-      timeslots = this.props.schedule.timeslots.map(timeslot => {
+      timeslots = this.props.schedule.timeslots.map((timeslot, index) => {
         return (
-          <TimeSlot startTime={timeslot.startTime} endTime={timeslot.endTime} />
+          <TimeSlot key={index}
+            id={timeslot.timeID}
+            startTime={timeslot.startTime} 
+            endTime={timeslot.endTime}
+            firstName={timeslot.firstName}
+            lastName={timeslot.lastName}
+            available={timeslot.available}
+          />
         );
       })
     }
