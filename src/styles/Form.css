@@ -22,3 +22,9 @@ input {
   font-weight: normal;
   color: red;
 }
+
+.cancel-button {
+  border: 1px solid #c52b2b;
+  background-color: #f55c5c;
+  color: white;
+}

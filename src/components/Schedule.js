@@ -30,6 +30,7 @@ class Schedule extends React.Component {
       })
       return (
         <div className="schedule">
+          <p className="timezone-disclaimer">*All times are in Eastern Standard Time (EST)</p>
           {timeslots}
         </div>
       );

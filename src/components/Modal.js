@@ -31,7 +31,7 @@ class Modal extends Component {
 
     let timeslot = this.props.selected;
 
-    if (this.props.selected.available || this.props.selected.editable) {
+    if (timeslot.available || timeslot.editable) {
       return (
         <div className="modal">
           { this.props.isShowing &&
@@ -39,9 +39,14 @@ class Modal extends Component {
               <div className="modal-backdrop" onClick={() => this.handleCloseButtonClick()}></div>
               <div className="modal-content">
                 <i className="fas fa-times fa-2x close-button" onClick={() => this.handleCloseButtonClick()}></i>
-                <h3>Schedule for:</h3>
-                <h3>{timeslot.startTime} - {timeslot.endTime}</h3>
-                <Form />
+                <h3 className="modal-title">Create An Appointment</h3>
+                <h4 className="modal-info-label">Time:</h4>
+                <h4 className="modal-info-copy">{timeslot.startTime} - {timeslot.endTime}</h4>
+
+                <div className="form-container">
+                  <Form firstName={timeslot.firstName} lastName={timeslot.lastName} phoneNumber={timeslot.phoneNumber} />
+                </div>
+                
               </div>
             </div>
           }
@@ -55,12 +60,26 @@ class Modal extends Component {
               <div className="modal-backdrop" onClick={() => this.handleCloseButtonClick()}></div>
               <div className="modal-content">
                 <i className="fas fa-times fa-2x close-button" onClick={() => this.handleCloseButtonClick()}></i>
-                <h3>Appointment Details:</h3>
-                <h3>{timeslot.firstName} {timeslot.lastName}</h3>
-                <p>{timeslot.startTime} - {timeslot.endTime}</p>
-                <p>{timeslot.phoneNumber}</p>
+
+                <h3 className="modal-title">Appointment Details</h3>
+
+                <div className="modal-info-section">
+                  <h4 className="modal-info-label">Name: </h4>
+                  <p className="modal-info-copy">{timeslot.firstName} {timeslot.lastName}</p>
+                </div>
+                
+                <div className="modal-info-section">
+                  <h4 className="modal-info-label">Phone Number: </h4>
+                  <p className="modal-info-copy">{timeslot.phoneNumber}</p>
+                </div>
+                
+                <div className="modal-info-section">
+                  <h4 className="modal-info-label">Time: </h4>
+                  <p className="modal-info-copy">{timeslot.startTime} - {timeslot.endTime}</p>
+                </div>
+
                 <button className="edit-appointment" onClick={() => this.handleEditClick()}>Edit Appointment</button>
-                <button className="cancel-appointment" onClick={() => this.handleCancelClick()}>Cancel Appointment</button>
+                <button className="cancel-appointment cancel-button" onClick={() => this.handleCancelClick()}>Cancel Appointment</button>
               </div>
             </div>
           }

@@ -19,9 +19,22 @@
   z-index: 11;
   padding: 30px;
   border: 1px solid #cfd4da;
-  border-radius: 4px;
+  border-radius: 18px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   animation: modal-animation 0.5s normal;
+  min-width: 270px;
+}
+
+.modal-info-section {
+  margin: 20px 0;
+}
+
+.modal-info-label {
+  margin: 0;
+}
+
+.modal-info-copy {
+  margin: 0;
 }
 
 .close-button {
@@ -36,14 +49,6 @@
 
 .close-button:hover {
   cursor: pointer;
-}
-
-@media only screen and (max-width: 500px) {
-  .confirm-modal-content {
-    transform: translate(-50%, -50%);
-    top:55%;
-    width: 100%;
-  }
 }
 
 @keyframes modal-animation {

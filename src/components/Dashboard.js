@@ -7,9 +7,14 @@ import '../styles/Dashboard.css';
 function Dashboard(props) {
     return (
       <div className="dashboard">
-        <div className="schedule-container">
+        <h1 className="logo">CARFIX</h1>
+
+        <div className="schedule-title">
           <h2>Schedule An Appointment</h2>
           <p>Please select an appointment time below.</p>
+        </div>
+        
+        <div className="schedule-container">
           <Schedule />
         </div>
       </div>

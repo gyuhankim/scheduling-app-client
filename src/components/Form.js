@@ -46,10 +46,10 @@ class ScheduleForm extends Component {
     
   }
   
-  renderField = ({ type, label, input, meta: { touched, error } }) => (
+  renderField = ({ type, label, input, placeholder, meta: { touched, error } }) => (
     <div className="input-field">
       <label className="form-label">{label}</label>
-      <input {...input} type={type} />
+      <input {...input} type={type} placeholder={placeholder} />
       {touched && error && <span className="error">{error}</span>}
     </div>
   );
@@ -58,13 +58,16 @@ class ScheduleForm extends Component {
     return (
       <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
     
-        <Field label="First Name" name="firstName" component={this.renderField} type="text" />   
+        <Field label="First Name" name="firstName" component={this.renderField} type="text" placeholder={this.props.firstName} />   
         
-        <Field label="Last Name" name="lastName" component={this.renderField} type="text" />
+        <Field label="Last Name" name="lastName" component={this.renderField} type="text" placeholder={this.props.lastName} />
       
-        <Field label="Phone Number" name="phoneNumber" component={this.renderField} type="text" />
+        <Field label="Phone Number" name="phoneNumber" component={this.renderField} type="text" placeholder={this.props.phoneNumber} />
+        <div className="test">
+          <button type="submit">Submit</button>
+          <button className="cancel-button" onClick={() => this.props.dispatch(hideModal())}>Cancel</button>
+        </div>
         
-        <button type="submit">Submit</button>
 
       </form>
     )

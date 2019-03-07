@@ -11,6 +11,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2d363e;
+  background-image: url("https://www.sammobile.com/wp-content/uploads/2017/06/Lake.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 code {
@@ -21,13 +26,14 @@ code {
 button {
   border: 1px solid #85909e;
   padding: 8px 16px;
-  border-radius: 22.5px;
+  border-radius: 14px;
   font-family: inherit;
   font-size: 16px;
   color: #2d363e;
   font-weight: bold;
   background-color: #FFF;
   cursor: pointer;
+  margin: 3px;
 }
 
 button:hover {
