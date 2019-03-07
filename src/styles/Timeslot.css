@@ -1,4 +1,4 @@
-.timeslot {
+.timeslot-available {
   border: 1px solid #cfd4da;
   border-radius: 4px;
   padding: 6px 12px;
@@ -6,7 +6,16 @@
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
 }
 
-.timeslot:hover {
+.timeslot-unavailable {
+  border: 1px solid #e69696;
+  background-color: #e2c3c3;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+}
+
+.timeslot-available:hover, .timeslot-unavailable:hover {
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
 }

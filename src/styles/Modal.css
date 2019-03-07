@@ -4,7 +4,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background: gray;
+  background: #2d363e;
   opacity: 0.3;
   z-index: 10;
   animation: backdrop-animation 0.5s normal;
@@ -17,13 +17,26 @@
   transform: translate(-50%, -50%);
   background: white;
   z-index: 11;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid #cfd4da;
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   animation: modal-animation 0.5s normal;
 }
 
+.close-button {
+  color: #d66a6a;
+  position: fixed;
+  left: 85%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 34px;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 500px) {
   .confirm-modal-content {

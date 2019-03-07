@@ -11,14 +11,10 @@ class Schedule extends React.Component {
     this.props.dispatch(getSchedule());
   }
 
-  handleClick() {
-    console.log(this.props.schedule);
-  }
-
   render() {
     let timeslots;
 
-    if (this.props.schedule) {
+    if (this.props.schedule.timeslots.length > 0) {
       timeslots = this.props.schedule.timeslots.map((timeslot, index) => {
         return (
           <TimeSlot key={index}
@@ -27,23 +23,30 @@ class Schedule extends React.Component {
             endTime={timeslot.endTime}
             firstName={timeslot.firstName}
             lastName={timeslot.lastName}
+            phoneNumber={timeslot.phoneNumber}
             available={timeslot.available}
           />
         );
       })
+      return (
+        <div className="schedule">
+          {timeslots}
+        </div>
+      );
+    } else {
+      return (
+        <div className="schedule">
+          Loading...
+        </div>
+      );
     }
-
-    return (
-      <div className="schedule">
-        <button onClick={() => this.handleClick()}>Click me!</button>
-        {timeslots}
-      </div>
-    );
+    
   }
 }
 
 const mapStateToProps = state => ({
-  schedule: state.schedule
+  schedule: state.schedule,
+  selected: state.schedule.selected
 });
 
 export default connect(mapStateToProps)(Schedule);

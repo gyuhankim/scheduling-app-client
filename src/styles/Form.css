@@ -1,5 +1,12 @@
 form {
   text-align: left;
+  padding: 10px;
+}
+
+input {
+  border: 1px solid #909eaa;
+  border-radius: 4px;
+  padding: 5px;
 }
 
 .input-field {

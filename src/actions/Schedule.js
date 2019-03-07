@@ -37,9 +37,8 @@ export const updateScheduleRequest = () => ({
 })
 
 export const UPDATE_SCHEDULE_SUCCESS = 'UPDATE_SCHEDULE_SUCCESS';
-export const updateScheduleSuccess = schedule => ({
-  type: UPDATE_SCHEDULE_SUCCESS,
-  schedule
+export const updateScheduleSuccess = () => ({
+  type: UPDATE_SCHEDULE_SUCCESS
 })
 
 export const UPDATE_SCHEDULE_ERROR = 'UPDATE_SCHEDULE_ERROR';
@@ -48,6 +47,37 @@ export const updateScheduleError = err => ({
   err
 })
 
-export const updateSchedule = data => dispatch => {
+export const updateSchedule = data => (dispatch, getState) => {
+  dispatch(updateScheduleRequest());
 
+  const selected = getState().schedule.selected;
+
+  return fetch(`${API_BASE_URL}/schedule`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      timeID: selected.id,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      phoneNumber: data.phoneNumber,
+      available: data.available || false
+    })
+  })
+  .then(() => dispatch(updateScheduleSuccess()))
+  .then(() => dispatch(getSchedule()))
+  .catch(err => dispatch(updateScheduleError(err)))
 }
+
+export const SELECT_TIME_SLOT = 'SELECT_TIME_SLOT';
+export const selectTimeSlot = selected => ({
+  type: SELECT_TIME_SLOT,
+  selected
+})
+
+export const MAKE_EDITABLE = 'MAKE_EDITABLE';
+export const makeEditable = bool => ({
+  type: MAKE_EDITABLE,
+  bool
+})
