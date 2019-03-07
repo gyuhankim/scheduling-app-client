@@ -18,7 +18,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  example: state.example
+
 })
 
 export default withRouter(connect(mapStateToProps)(App));
