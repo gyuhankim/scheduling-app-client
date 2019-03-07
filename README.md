@@ -16,8 +16,10 @@
 ### Instructions
 1) Clone this repo
 2) `npm i` to install dependencies
-3) `npm start` to run the client
-_CARFIX server and MongoDB must be running for full functionality_
+3) `npm start` to run the client (_CARFIX server and MongoDB must be running for full functionality_)
+
+## Server Repo
+[CARFIX Server Repo](https://github.com/gyuhankim/scheduling-app-server "CARFIX Server Repo")
 
 ## Tech Stack
 * React
@@ -28,9 +30,6 @@ _CARFIX server and MongoDB must be running for full functionality_
 1) Display hour long time slots from 9AM to 5PM
 2) Allow user to select a time slot and schedule an appointment
 3) Allow user to edit an existing appointment
-
-## Server Repo
-[CARFIX Server Repo](https://github.com/gyuhankim/scheduling-app-server "CARFIX Server Repo")
 
 ## Components
 Component | Purpose |
