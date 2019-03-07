@@ -1,67 +1,59 @@
-# LaunchPad.gg
+# CARFIX
 
 ## Table of Contents
-- [Introduction](#introduction)
+- [Live Site](#live-site)
+- [Run Locally](#run-locally)
 - [Tech Stack](#tech-stack)
 - [Goals](#goals)
-- [Live Site](#live-site)
 - [Server Repo](#server-repo)
 - [Components](#components)
 - [Screenshots](#screenshots)
 
-## Introduction
-### LaunchPad is a simple webapp that displays all future video game releases
-A webapp designed to spotlight upcoming video game release dates. Building value for users by providing one singular source with a clean and simple interface to view and track the games they're most excited for.
+## Live Site
+[CARFIX](https://stark-fjord-78742.herokuapp.com/ "CARFIX")
+
+## Run Locally
+### Instructions
+1) Clone this repo
+2) `npm i` to install dependencies
+3) `npm start` to run the client
+_CARFIX server and MongoDB must be running for full functionality_
 
 ## Tech Stack
 * React
 * Redux
-* UnderscoreJS
-* [IGDB API](https://igdb.github.io/api/)
 
 ## Goals
-### The goals for LaunchPad is to:
-1) Spotlight upcoming video game release dates
-2) Enable users to track their most anticipated games by favorite-ing them
-3) Get users excited by displaying trailers, screenshots and recent news surrounding their favorite upcoming games
-
-## Live Site
-[LaunchPad.gg](https://mysterious-sands-19667.herokuapp.com/ "LaunchPad.gg")
+### The goals for CARFIX is to:
+1) Display hour long time slots from 9AM to 5PM
+2) Allow user to select a time slot and schedule an appointment
+3) Allow user to edit an existing appointment
 
 ## Server Repo
-[LaunchPad Server Repo](https://github.com/gyuhankim/launchpad-server "LaunchPad Server Repo")
+[CARFIX Server Repo](https://github.com/gyuhankim/scheduling-app-server "CARFIX Server Repo")
 
 ## Components
 Component | Purpose |
 --- | --- |
-Nav | Top bar containing nav links |
-Toolbar | Displays search bar and updates state with the input value |
-GameList | Main view containing logic for fetching games from DB, filtering and processing of fetched games and infinite scroll logic |
-GamePage | View for selected game containing additional information |
-LoginPage | Responsible for displaying the login form |
-LoginForm | Handles form submission and user authentication |
-RegistrationPage | Responsible for displaying the registration form |
-RegistrationForm | Handles form submission and POSTs new user to backend |
-Onboarding | Initial user onboarding splash screen |
+App | Main component responsible for routing |
+Dashboard | Display component, serves as a landing page |
+Form | Redux-Form component, responsible for user contact information input and transmitting to server |
+Modal | Pop-up display containing the Form component or existing appointment information |
+Schedule | Responsible for displaying a list of TimeSlot components |
+TimeSlot | Displays available/unavailable appointment times |
 
 ## Screenshots
-### User Onboarding
-![alt text](screenshots/onboarding.png "Description goes here")
+### Landing Page
+![alt text](screenshots/landing-page.png "Description goes here")
 
-### Game List View
-![alt text](screenshots/game-list-view.png "Description goes here")
+### Appointment Form & Modal
+![alt text](screenshots/form-modal.png "Description goes here")
 
-### Game List View 2
-![alt text](screenshots/game-list-view-2.png "Description goes here")
+### Form Validation
+![alt text](screenshots/form-validation.png "Description goes here")
 
-### Favorites List
-![alt text](screenshots/favorites-list-view.png "Description goes here")
+### Timeslot Unavailable
+![alt text](screenshots/unavailable-timeslot.png "Description goes here")
 
-### Game Detail View
-![alt text](screenshots/game-detail-view.png "Description goes here")
-
-### Registration Page
-![alt text](screenshots/register-view.png "Description goes here")
-
-### Login Page
-![alt text](screenshots/login-view.png "Description goes here")
+### Edit Appointment & Modal
+![alt text](screenshots/edit-appointment.png "Description goes here")
