@@ -43,7 +43,6 @@ LoginForm | Handles form submission and user authentication |
 RegistrationPage | Responsible for displaying the registration form |
 RegistrationForm | Handles form submission and POSTs new user to backend |
 Onboarding | Initial user onboarding splash screen |
-FavoritesList | Similar to GameList component but filters based on users' favorites |
 
 ## Screenshots
 ### User Onboarding
