@@ -16,7 +16,8 @@
 ### Instructions
 1) Clone this repo
 2) `npm i` to install dependencies
-3) `npm start` to run the client (_CARFIX server and MongoDB must be running for full functionality_)
+3) `npm start` to run the client  
+(**CARFIX server and MongoDB must be running for full functionality**)
 
 ## Server Repo
 [CARFIX Server Repo](https://github.com/gyuhankim/scheduling-app-server "CARFIX Server Repo")
