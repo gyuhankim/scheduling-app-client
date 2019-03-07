@@ -7,14 +7,11 @@ import Modal from './Modal';
 import '../styles/App.css';
 
 class App extends Component {
-  
   render() {
-
     return (
       <div className="App">
         <Modal />
         <Route exact path="/" component={Dashboard} />
-
       </div>
     );
   }
@@ -25,4 +22,3 @@ const mapStateToProps = state => ({
 })
 
 export default withRouter(connect(mapStateToProps)(App));
-// export default connect(mapStateToProps)(HeaderBar);

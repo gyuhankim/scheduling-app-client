@@ -43,7 +43,6 @@ class ScheduleForm extends Component {
       }))
       this.props.dispatch(hideModal())
     }
-    
   }
   
   renderField = ({ type, label, input, placeholder, meta: { touched, error } }) => (
@@ -67,7 +66,6 @@ class ScheduleForm extends Component {
           <button type="submit">Submit</button>
           <button className="cancel-button" onClick={() => this.props.dispatch(hideModal())}>Cancel</button>
         </div>
-        
 
       </form>
     )

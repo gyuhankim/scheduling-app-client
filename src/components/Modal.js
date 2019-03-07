@@ -37,17 +37,18 @@ class Modal extends Component {
           { this.props.isShowing &&
             <div>
               <div className="modal-backdrop" onClick={() => this.handleCloseButtonClick()}></div>
-              <div className="modal-content">
+
+              <article className="modal-content">
                 <i className="fas fa-times fa-2x close-button" onClick={() => this.handleCloseButtonClick()}></i>
+
                 <h3 className="modal-title">Create An Appointment</h3>
                 <h4 className="modal-info-label">Time:</h4>
                 <h4 className="modal-info-copy">{timeslot.startTime} - {timeslot.endTime}</h4>
 
                 <div className="form-container">
                   <Form firstName={timeslot.firstName} lastName={timeslot.lastName} phoneNumber={timeslot.phoneNumber} />
-                </div>
-                
-              </div>
+                </div>   
+              </article>
             </div>
           }
         </div>
@@ -58,7 +59,7 @@ class Modal extends Component {
           { this.props.isShowing &&
             <div>
               <div className="modal-backdrop" onClick={() => this.handleCloseButtonClick()}></div>
-              <div className="modal-content">
+              <article className="modal-content">
                 <i className="fas fa-times fa-2x close-button" onClick={() => this.handleCloseButtonClick()}></i>
 
                 <h3 className="modal-title">Appointment Details</h3>
@@ -80,7 +81,7 @@ class Modal extends Component {
 
                 <button className="edit-appointment" onClick={() => this.handleEditClick()}>Edit Appointment</button>
                 <button className="cancel-appointment cancel-button" onClick={() => this.handleCancelClick()}>Cancel Appointment</button>
-              </div>
+              </article>
             </div>
           }
         </div>

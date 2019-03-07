@@ -14,10 +14,10 @@ class TimeSlot extends Component {
 
   render() {
     return (
-      <div className={this.props.available ? "timeslot-available" : "timeslot-unavailable"} 
+      <section className={this.props.available ? "timeslot-available" : "timeslot-unavailable"} 
         onClick={() => this.handleModalShow()}>
         <div className="timeslot-time">{this.props.startTime} to {this.props.endTime}</div>
-      </div>
+      </section>
     );
   } 
 }
